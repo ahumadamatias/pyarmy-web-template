@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { FormControl, TextField,Button} from '@material-ui/core'
-import {AuthenticationService} from '../../services/authentication.service'
+import { AuthenticationService } from '../../services/authentication.service'
 
 const Register = () => {
-
     let userModel = {
         username: '',
         email: '',
@@ -11,8 +10,9 @@ const Register = () => {
         last_name: '',
         password: '',
     }
+
     const [user, setUser] = useState(userModel)
-    
+
     const handleChange = (e) => {
         e.preventDefault();
         setUser({
@@ -21,16 +21,15 @@ const Register = () => {
         })
         console.log(user);
     }
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(user)
         new AuthenticationService().register(user)
             .then( (data) => {
-                console.log(data)
+                localStorage.setItem('jwt', JSON.stringify(data.token));
             })
     }
-
 
     return (
         <div className="wrapper">
@@ -46,7 +45,7 @@ const Register = () => {
                 <div className="btn-submit">
                     <Button onClick={handleSubmit} variant="contained" color="primary">SigNup</Button>
                 </div>
-                
+
             </div>
         </div>
     )

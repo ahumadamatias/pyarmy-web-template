@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault();
         console.log({[e.target.name]: e.target.value})
         setUser({
-            ...userCredentials,
+            ...user,
             [e.target.name]: e.target.value
         })
     }

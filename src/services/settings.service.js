@@ -1,3 +1,3 @@
 export class SettingsService {
-    apiUrl = 'localhost:8000/'
+    apiUrl = 'http://localhost:8000'
 }

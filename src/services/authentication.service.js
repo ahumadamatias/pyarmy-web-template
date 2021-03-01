@@ -3,8 +3,8 @@ import { SettingsService } from "./settings.service";
 
 export class AuthenticationService extends SettingsService {
     async register(user) {
-        user = JSON.stringify(user);
-        const query = await axios.post(`${this.apiUrl}/auth/users`, user, {
+        let userPrueba = JSON.stringify(user);
+        const query = await axios.post(`${this.apiUrl}/auth/users`, userPrueba, {
             headers: {
                 'Content-Type': 'application/json'
             }

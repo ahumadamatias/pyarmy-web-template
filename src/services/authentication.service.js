@@ -1,13 +1,14 @@
-import axios from "axios";
-import { SettingsService } from "./settings.service";
+import axios from 'axios';
+import { SettingsService } from './settings.service';
 
 export class AuthenticationService extends SettingsService {
     async register(user) {
-        let user = JSON.stringify(user);
+        user = JSON.stringify(user);
+
         const query = await axios.post(`${this.apiUrl}/auth/users`, user, {
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json',
+            },
         });
 
         return query.data;
@@ -15,10 +16,11 @@ export class AuthenticationService extends SettingsService {
 
     async login(userCredentials) {
         userCredentials = JSON.stringify(userCredentials);
+
         const query = await axios.post(`${this.apiUrl}/login`, userCredentials, {
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json',
+            },
         });
 
         return query.data;
@@ -26,13 +28,15 @@ export class AuthenticationService extends SettingsService {
 
     async showCurrentUser() {
         const jwt = JSON.parse(localStorage.getItem('jwt'));
+
         const query = await axios.get(`${this.apiUrl}/auth/current_user`, {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${jwt['jwt']}`
+
+                Authorization: `Bearer ${jwt['jwt']}`,
             },
         });
 
         return query.data;
     }
-} 
+}

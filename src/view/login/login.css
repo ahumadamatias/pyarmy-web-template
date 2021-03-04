@@ -1,0 +1,9 @@
+.container-login{
+    height: 100vh;
+    min-height: 400px;
+    display: grid;
+    background-image: url('../home/background-react-dif.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

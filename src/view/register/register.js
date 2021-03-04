@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FormControl, TextField, Button } from '@material-ui/core';
 import { AuthenticationService } from '../../services/authentication.service';
 
+import './register.css';
+
 const Register = () => {
     let userModel = {
         username: '',
@@ -31,55 +33,55 @@ const Register = () => {
     };
 
     return (
-        <div className='wrapper'>
-            <div className='mat-card'>
-                <h1>SigNup</h1>
-                <FormControl className='login-input'>
-                    <TextField
-                        className='item-card'
-                        name='username'
-                        type='text'
-                        variant='outlined'
-                        onChange={handleChange}
-                        label='Username'
-                    />
-                    <TextField
-                        className='item-card'
-                        name='email'
-                        type='text'
-                        variant='outlined'
-                        onChange={handleChange}
-                        label='Email'
-                    />
-                    <TextField
-                        className='item-card'
-                        name='first_name'
-                        type='text'
-                        variant='outlined'
-                        onChange={handleChange}
-                        label='First Name'
-                    />
-                    <TextField
-                        className='item-card'
-                        name='last_name'
-                        type='text'
-                        variant='outlined'
-                        onChange={handleChange}
-                        label='Last Name'
-                    />
-                    <TextField
-                        className='item-card'
-                        name='password'
-                        type='password'
-                        variant='outlined'
-                        onChange={handleChange}
-                        label='Password'
-                    />
-                </FormControl>
-                <div className='btn-submit'>
-                    <Button onClick={handleSubmit} variant='contained' color='primary'>
-                        SigNup
-                    </Button>
+        <div className="container-register">
+            <div className='wrapper'>
+                <div className='mat-card'>
+                    <h1>SignUp</h1>
+                    <FormControl className='login-input'>
+                        <TextField
+                            className='item-card'
+                            name='username'
+                            type='text'
+                            variant='outlined'
+                            onChange={handleChange}
+                            label='Username'
+                        />
+                        <TextField
+                            className='item-card'
+                            name='email'
+                            type='text'
+                            variant='outlined'
+                            onChange={handleChange}
+                            label='Email'
+                        />
+                        <TextField
+                            className='item-card'
+                            name='first_name'
+                            type='text'
+                            variant='outlined'
+                            onChange={handleChange}
+                            label='First Name'
+                        />
+                        <TextField
+                            className='item-card'
+                            name='last_name'
+                            type='text'
+                            variant='outlined'
+                            onChange={handleChange}
+                            label='Last Name'
+                        />
+                        <TextField
+                            className='item-card'
+                            name='password'
+                            type='password'
+                            variant='outlined'
+                            onChange={handleChange}
+                            label='Password'
+                        />
+                    </FormControl>
+                    <div className='btn-submit'>
+                        <button type="submit" className="btn btn-primary">Enviar</button>
+                    </div>
                 </div>
             </div>
         </div>

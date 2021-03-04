@@ -2,8 +2,11 @@
     height: 100vh;
     min-height: 400px;
     display: grid;
-    background-image: url('./react-backgroud.jpg');
+    background-image: url('./background-react.jpg');
     background-position: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .home img {
@@ -30,4 +33,10 @@
 
 .home__title {
     color: white;
+}
+.home h1{
+    font-size: 50px;
+}
+.home button{
+    font-size: 19px;
 }

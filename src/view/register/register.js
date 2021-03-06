@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { FormControl, TextField, Button } from '@material-ui/core';
 import { AuthenticationService } from '../../services/authentication.service';
 
-import './register.css';
-
 const Register = () => {
     let userModel = {
         username: '',
@@ -80,7 +78,9 @@ const Register = () => {
                         />
                     </FormControl>
                     <div className='btn-submit'>
-                        <button type="submit" className="btn btn-primary">Enviar</button>
+                        <Button onClick={handleSubmit} variant='contained' color='primary'>
+                            SignUp
+                        </Button>
                     </div>
                 </div>
             </div>

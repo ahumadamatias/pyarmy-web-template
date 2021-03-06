@@ -9,11 +9,21 @@
     outline: none;
 }
 
+body {
+    height: 100vh;
+    min-height: 400px;
+    background-image: url('view/home/background-react-dif.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 3em;
     font-weight: bold;
 }
+
 .wrapper {
     width: 100%;
     max-width: 800px;
@@ -27,6 +37,7 @@ h1 {
         padding: 24px;
     }
 }
+
 .mat-card {
     padding: 24px;
     width: 100%;
@@ -41,9 +52,11 @@ h1 {
     overflow: hidden;
     background-color: #fffe
 }
+
 .mat-card h1 {
     margin: auto;
 }
+
 .mat-card .login-input {
     padding: 24px;
     width: 90%;
@@ -52,9 +65,11 @@ h1 {
     flex-direction: column;
     margin: auto;
 }
+
 .mat-card .item-card {
     margin: 5px;
 }
+
 .mat-card .btn-submit {
     margin: auto;
 }

@@ -19,19 +19,18 @@ const Register = () => {
             ...user,
             [e.target.name]: e.target.value,
         });
-        console.log(user);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(user);
         new AuthenticationService().register(user).then((data) => {
             localStorage.setItem('jwt', JSON.stringify(data.token));
+            window.location.href = '/';
         });
     };
 
     return (
-        <div className="container-register">
+        <div className='container-register'>
             <div className='wrapper'>
                 <div className='mat-card'>
                     <h1>SignUp</h1>

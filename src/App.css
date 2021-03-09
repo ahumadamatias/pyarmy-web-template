@@ -50,7 +50,7 @@ h1 {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
         0 1px 10px 0 rgba(0, 0, 0, 0.12);
     overflow: hidden;
-    background-color: #fffe
+    background-color: #fffe;
 }
 
 .mat-card h1 {
@@ -72,4 +72,15 @@ h1 {
 
 .mat-card .btn-submit {
     margin: auto;
+}
+
+.container-table {
+    width: 85%;
+    margin: auto;
+    padding: 45px;
+    box-sizing: border-box;
+}
+
+.table-cell-btn {
+    width: 50px;
 }

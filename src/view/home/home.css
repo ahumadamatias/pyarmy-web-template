@@ -34,9 +34,11 @@
 .home__title {
     color: white;
 }
-.home h1{
+
+.home h1 {
     font-size: 50px;
 }
-.home button{
+
+.home button {
     font-size: 19px;
 }

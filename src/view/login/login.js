@@ -12,7 +12,6 @@ const Login = () => {
 
     const handleChange = (e) => {
         e.preventDefault();
-        console.log({ [e.target.name]: e.target.value });
         setUser({
             ...user,
             [e.target.name]: e.target.value,
@@ -23,11 +22,12 @@ const Login = () => {
         e.preventDefault();
         new AuthenticationService().login(user).then((data) => {
             localStorage.setItem('jwt', JSON.stringify(data.access));
+            window.location.href = '/';
         });
     };
 
     return (
-        <div className="container-login">
+        <div className='container-login'>
             <div className='wrapper'>
                 <div className='mat-card'>
                     <h1>Sign In</h1>
